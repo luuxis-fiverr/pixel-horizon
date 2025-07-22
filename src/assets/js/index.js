@@ -12,17 +12,15 @@ class Splash {
         this.splashAuthor = document.querySelector(".splash-author");
         this.message = document.querySelector(".message");
         this.progress = document.querySelector(".progress");
-        // document.addEventListener('DOMContentLoaded', async () => {
-        //     let databaseLauncher = new database();
-        //     let configClient = await databaseLauncher.readData('configClient');
-        //     let theme = configClient?.launcher_config?.theme || "dark";
-        //     let isDarkTheme = await ipcRenderer.invoke('is-dark-theme', theme).then(res => res)
-        //     document.body.className = isDarkTheme ? 'dark global' : 'light global';
-        //     if (process.platform == 'win32') ipcRenderer.send('update-window-progress-load')
-        //     this.startAnimation()
-        // });
-
-        this.startLauncher()
+        document.addEventListener('DOMContentLoaded', async () => {
+            let databaseLauncher = new database();
+            let configClient = await databaseLauncher.readData('configClient');
+            let theme = configClient?.launcher_config?.theme || "dark";
+            let isDarkTheme = await ipcRenderer.invoke('is-dark-theme', theme).then(res => res)
+            document.body.className = isDarkTheme ? 'dark global' : 'light global';
+            if (process.platform == 'win32') ipcRenderer.send('update-window-progress-load')
+            this.startAnimation()
+        });
     }
 
     async startAnimation() {
