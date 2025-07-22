@@ -29,7 +29,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/luuxis-fiverr/PokeFree-Launcher.git"
+        "url": "git+https://github.com/luuxis-fiverr/pixel-horizon.git"
     },
     "devDependencies": {
         "cross-env": "^7.0.3",
