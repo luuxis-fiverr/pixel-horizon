@@ -1,7 +1,7 @@
 {
     "name": "pixelhorizon-launcher",
     "productname": "pixel horizon Launcher",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Launcher Mincraft pour le serveur pixel horizon",
     "main": "src/app.js",
     "author": {
