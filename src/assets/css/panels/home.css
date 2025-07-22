@@ -1,0 +1,379 @@
+.home .container {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-home {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Status server                                                               *
+ *                                                                             *
+ ******************************************************************************/
+
+.status-server {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--background);
+    width: 25rem;
+    height: 3rem;
+    color: var(--color);
+    border-radius: 10px;
+    margin-top: 3rem;
+    padding: 1rem;
+    text-align: center;
+    display: none;
+}
+
+.server-status-icon {
+    height: 5rem;
+}
+
+.server-status-name {
+    font-size: 1.5rem;
+    color: var(--color);
+}
+
+.server-status-text {
+    font-size: 0.6rem;
+    color: #1AC707;
+}
+
+.server-status-infos .red {
+    color: #FF0409;
+}
+
+.status-player-count {
+    background: var(--shadow);
+    min-width: 3rem;
+    height: 3rem;
+    border-radius: 10px;
+}
+
+.player-count {
+    font-size: 1.5rem;
+    margin: 0.4rem 0.5rem;
+}
+
+.status-player-count:after {
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 10px;
+    top: 10px;
+    right: 10px;
+    border-radius: 15px;
+    border: solid 5px var(--background);
+    background: #1AC707;
+}
+
+.red:after {
+    background: #FF0409;
+}
+
+.home-bottom {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 80px - 8rem);
+    display: flex;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * sidebar                                                                     *
+ *                                                                             *
+ ******************************************************************************/
+
+.sidebar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 120px;
+    height: calc(100% - 4rem);
+    background: var(--background);
+    flex-direction: column;
+    padding: 2rem 0;
+}
+
+.player-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px;
+    height: 3rem;
+    margin: 0 1.5rem;
+}
+
+.player-head {
+    background: url('../../images/default/setve.png'), no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+    transition: var(--transition);
+    height: 3rem;
+    width: 3rem;
+    pointer-events: none;
+    border-radius: 15px;
+}
+
+
+/*******************************************************************************
+ *                                                                             *
+ * social media                                                                *
+ *                                                                             *
+ ******************************************************************************/
+
+
+
+.social-tab {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    width: 100px;
+    height: calc(100% - 20px);
+}
+
+.social-list {
+    border-radius: 10px;
+    height: 100%;
+}
+
+.social-block {
+    display: flex;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.social-block .icon-social {
+    pointer-events: none;
+    background-repeat: no-repeat;
+    height: 55%;
+    width: 55%;
+    filter: var(--svg-color);
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * game container                                                              *
+ *                                                                             *
+ ******************************************************************************/
+.start-game-container {
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.progress-circle {
+    position: absolute;
+    width: 37px;
+    height: 37px;
+    left: 10px;
+    top: 6px;
+}
+
+.info-starting-game-progress {
+    position: absolute;
+    top: -45px;
+    left: -26px;
+    border-radius: 20px;
+    height: 40px;
+    width: 100px;
+    background: var(--background-element);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    justify-content: center;
+}
+
+.info-starting-game-progress-container:hover .info-starting-game-progress {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.progress-ring {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: black 4px solid;
+    background: conic-gradient(#FFD83E 0% 0%, transparent 0% 100%);
+    mask: radial-gradient(circle at center, transparent 25%, black 0%);
+    -webkit-mask: radial-gradient(circle at center, transparent 35.8%, black 0%);
+    pointer-events: none;
+}
+
+.progress-ring::before {
+    position: absolute;
+    content: '';
+    top: 16.3%;
+    left: 16%;
+    width: 51%;
+    height: 51%;
+    border-radius: 50%;
+    border: black 4px solid;
+    pointer-events: none;
+}
+
+.player-menu {
+    color: var(--element-color);
+    transform: rotate(270deg);
+    pointer-events: none;
+}
+
+.play-elements {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.play-instance {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    border: solid 3px var(--element-color);
+    border-radius: 15px;
+    height: 3.2rem;
+    cursor: pointer;
+}
+
+.play-btn {
+    display: flex;
+    padding: 0 1rem;
+    border: none;
+    height: 100%;
+    border-radius: 10px;
+    background: var(--element-color);
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    pointer-events: none;
+    align-items: center;
+}
+
+.instance-select {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: -40px;
+    top: -2;
+    color: var(--element-color);
+    font-size: 1rem;
+    height: calc(100% - 1px);
+    border: solid 3px var(--element-color);
+    text-align: center;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 0 0.5rem;
+    cursor: pointer;
+}
+
+.instance-select:before {
+    transform: rotate(270deg);
+    pointer-events: none;
+}
+
+.info-starting-game {
+    position: relative;
+    display: none;
+    flex-direction: row-reverse;
+    align-items: center;
+    width: 255px;
+    height: 57.2px;
+    justify-content: space-between;
+}
+
+.info-starting-game-text {
+    font-size: 1.5rem;
+    color: black;
+    background: var(--element-color);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    border-radius: 15px;
+}
+
+.settings-btn {
+    font-size: 4rem;
+    color: var(--element-color);
+    margin: 0 1.5rem;
+    cursor: pointer;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * instance popup                                                              *
+ *                                                                             *
+ ******************************************************************************/
+.instance-popup {
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: #000000b3;
+    z-index: 10;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.instances-tab {
+    position: relative;
+    background: var(--background);
+    border-radius: 10px;
+    padding: 1rem 3rem;
+}
+
+.close-popup {
+    position: absolute;
+    display: flex;
+    top: 10px;
+    right: 10px;
+    background: var(--shadow);
+    height: 30px;
+    width: 30px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.instances-tab p {
+    margin-top: 1.5rem;
+    font-size: 2rem;
+}
+
+.instance-elements {
+    background: var(--background-element);
+    text-align: center;
+    border-radius: 10px;
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.instance-elements:hover {
+    background: var(--element-color);
+}
+
+.active-instance {
+    background: var(--element-color);
+}

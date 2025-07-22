@@ -1,0 +1,43 @@
+{
+    "name": "pixelhorizon-launcher",
+    "productname": "pixel horizon Launcher",
+    "version": "1.0.1",
+    "description": "Launcher Mincraft pour le serveur pixel horizon",
+    "main": "src/app.js",
+    "author": {
+        "name": "luuxis, Inc.",
+        "email": "contact@luuxis.fr",
+        "url": "https://github.com/luuxis"
+    },
+    "url": "https://pixelhorizon.fr/launcher",
+    "scripts": {
+        "start": "cross-env-shell NODE_ENV=dev electron .",
+        "dev": "cross-env-shell DEV_TOOL=open npm start",
+        "build": "node build.js --obf=true --build=platform",
+        "icon": "node build.js --icon=https://pixelhorizon.fr/storage/img/icone.png"
+    },
+    "license": "CCANC",
+    "nodemonConfig": {
+        "ext": "js,html,css",
+        "ignore": "**/test"
+    },
+    "dependencies": {
+        "electron-updater": "^6.3.9",
+        "minecraft-java-core": "^4.1.5",
+        "node-bdd": "^2.0.4",
+        "xml-js": "^1.6.11"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/luuxis-fiverr/PokeFree-Launcher.git"
+    },
+    "devDependencies": {
+        "cross-env": "^7.0.3",
+        "electron": "^23.3.13",
+        "electron-builder": "^25.1.8",
+        "javascript-obfuscator": "^4.1.1",
+        "jimp": "^1.6.0",
+        "nodemon": "^3.1.9",
+        "png2icons": "^2.0.1"
+    }
+}
